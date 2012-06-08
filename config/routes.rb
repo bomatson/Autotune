@@ -1,8 +1,16 @@
 Autotune::Application.routes.draw do
 
+  devise_for :users # :path_names => {:sign_up => "register"}
+
   root to: 'static_pages#home'
   
   match '/about',   to: 'static_pages#about'
+
+  
+  #Lastfm API
+  # Your API Key is 6b47acf0dacf61652d44a29b3930d64a
+  # Your secret is 1fb146e38d943d93d07f351ff0841ec9
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
