@@ -1,10 +1,15 @@
 Autotune::Application.routes.draw do
 
-  devise_for :users # :path_names => {:sign_up => "register"}
+  #devise_for :users # :path_names => {:sign_up => "register"}
+  get "sessions/twitter", as: :twitter_signin
+  get "sessions/rdio", as: :rdio_signin
 
   root to: 'static_pages#home'
   
   match '/about',   to: 'static_pages#about'
+
+  match '/signout' => 'sessions#destroy', :as => :signout
+  match '/auth/:provider/callback', to: 'sessions#create'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

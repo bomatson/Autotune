@@ -7,16 +7,24 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
-gem 'devise'
+
+gem 'rdio', '~> 0.0.99'
+gem 'oauth', '~> 0.4.6'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-rdio'
 gem 'lastfm'
 gem 'twitter'
+gem 'decent_exposure'
 
 gem 'resque'
 gem 'resque-scheduler'
 
 gem 'hirefire'
+gem 'ruby-debug-base19', :git => 'https://github.com/tribune/ruby-debug-base19.git', :require => false, :group => [:development, :test]
 
 group :development, :test do
+
   gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '>=2.9.0'
   gem 'guard-rspec', '>=0.5.5'

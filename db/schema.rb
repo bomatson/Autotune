@@ -11,10 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120610010039) do
+ActiveRecord::Schema.define(:version => 20120610173151) do
 
   create_table "processed_tweets", :force => true do |t|
-    t.integer "tweet_id", :null => false
+    t.integer "tweet_id",       :null => false
+    t.string  "embed_url"
+    t.string  "from_user"
+    t.string  "from_user_name"
+    t.string  "to_user"
+    t.string  "to_user_name"
+    t.string  "text"
+    t.string  "track"
+    t.string  "album"
+    t.string  "artist"
+  end
+
+  create_table "profiles", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|
@@ -30,6 +47,14 @@ ActiveRecord::Schema.define(:version => 20120610010039) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "name"
+    t.string   "twitter_id"
+    t.string   "twitter_name"
+    t.string   "twitter_token"
+    t.string   "twitter_secret"
+    t.string   "rdio_id"
+    t.string   "rdio_token"
+    t.string   "rdio_secret"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

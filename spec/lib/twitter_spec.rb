@@ -1,4 +1,4 @@
-require 'spec_helper'
+require './spec/spec_helper'
 
 describe "Twitter" do
   let(:user) { Twitter.user('JakeHoffner')}
