@@ -39,7 +39,7 @@ $(document).ready(function() {
 	$('#iWantTo div.action').click( function() {
 		var hashTag = $(this).attr('id');
 		console.log(hashTag);
-		var tweetText = "I want to #" + hashTag + ". @reply me a song to add it my #autotune playlist."
+		var tweetText = "I want to #" + hashTag + " - @ reply me a song to add it my #AutoTuneApp playlist."
 		$('#tweetThisForm form textarea').html(tweetText);
 		showTweetForm(); 
 	});
