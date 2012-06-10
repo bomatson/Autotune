@@ -36,4 +36,9 @@ Autotune::Application.configure do
   config.assets.debug = true
   
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  config.twitter = {
+      key: 'W1fX4UykZTmrZ6jOhUnkYQ',
+      secret: 'GjIBtLbQk5H8NdSlu6eHaJAWSgzyCFgF9utpbQI'
+  }
 end
