@@ -34,4 +34,9 @@ Autotune::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  config.twitter = {
+      key: 'W1fX4UykZTmrZ6jOhUnkYQ',
+      secret: 'GjIBtLbQk5H8NdSlu6eHaJAWSgzyCFgF9utpbQI'
+  }
 end

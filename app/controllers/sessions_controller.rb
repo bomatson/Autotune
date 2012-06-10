@@ -1,13 +1,33 @@
 class SessionsController < ApplicationController
   
   def rdio
-    @user = User.find_by(auth_hash)
-    self.current_user = @user
-    redirect_to '/'
+    unless params[:return_to].blank?
+      session[:return_to] = params[:return_to]
+    end
+
+    redirect_to '/auth/rdio'
+  end
+
+  def twitter
+    unless params[:return_to].blank?
+      session[:return_to] = params[:return_to]
+    end
+
+    redirect_to '/auth/twitter'
   end
   
   def create
+    auth_hash = request.env['omniauth.auth']
+    token = request.env['omniauth.strategy'].access_token.token
+    user = User.sign_in_with_auth_hash(auth_hash, token)
 
+    login_user(user)
+    return_to_url(root_path)
+  end
+
+  def destroy
+    logout_user
+    return_to_url('/', notice: "You have successfully logged out")
   end
 
   private
