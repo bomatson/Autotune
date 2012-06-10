@@ -8,7 +8,7 @@ class TwitterCrawler
       pre_processed = pre_process_tweet(tweet)
 
       if pre_processed.should_process
-        proces_tweet(pre_processed)
+        process_tweet(pre_processed)
       end
     end
   end
@@ -16,7 +16,7 @@ class TwitterCrawler
   def process_tweet(pre_processed_tweet)
     # search for song
     # if song is found then get the embed_url
-    #save a new processed_tweet active record
+    # save a new processed_tweet active record
   end
 
   def pre_process_tweet(tweet)

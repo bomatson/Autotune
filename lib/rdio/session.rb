@@ -17,7 +17,7 @@ module Rdio
     
   private
     def create_rdio_connection
-      Rdio.new(ENV['RDIO_KEY'], ENV['RDIO_SECRET']).tap do |rdio|
+      Rdio::init(ENV['RDIO_KEY'], ENV['RDIO_SECRET']).tap do |rdio|
         rdio.session = @session
       end      
     end    
