@@ -3,7 +3,7 @@ require 'twitter_crawler.rb'
 
 module Rdio
   class Search
-    attr_accessible :embed_url
+    
   
   def process_tweet(processed)
     suggestion = Rdio::init(ENV['RDIO_KEY'], ENV['RDIO_SECRET'])
@@ -15,7 +15,7 @@ module Rdio
       raise 'Rdio error'
     end
     
-    :embed_url = embed
+    embed
 
   end
   

@@ -2438,3 +2438,688 @@ ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.twi
   Rendered /Users/roryreiff/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
   Rendered /Users/roryreiff/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
   Rendered /Users/roryreiff/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-10 13:33:34 -0700
+Connecting to database specified by database.yml
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (26.9ms)
+Compiled jquery.js  (2ms)  (pid 9527)
+Compiled jquery_ujs.js  (0ms)  (pid 9527)
+Compiled application.js  (502ms)  (pid 9527)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 1392ms (Views: 1357.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-06-10 13:33:37 -0700
+Served asset /sessions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-10 13:33:37 -0700
+Served asset /application.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-06-10 13:33:37 -0700
+Served asset /custom.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-06-10 13:33:37 -0700
+Served asset /static_pages.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-06-10 13:33:37 -0700
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-10 13:33:37 -0700
+Served asset /jquery_ujs.js - 200 OK (53ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-06-10 13:33:37 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-10 13:33:37 -0700
+Served asset /jquery.js - 200 OK (7ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-06-10 13:33:37 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-06-10 13:33:37 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-06-10 13:33:37 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-06-10 13:33:37 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-06-10 13:33:37 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-06-10 13:33:38 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-06-10 13:33:38 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-06-10 13:33:38 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-06-10 13:33:38 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-06-10 13:33:38 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-06-10 13:33:38 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-06-10 13:33:38 -0700
+Served asset /bootstrap.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/autotune_custom.js?body=1" for 127.0.0.1 at 2012-06-10 13:33:38 -0700
+Served asset /autotune_custom.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.rdio.min.js?body=1" for 127.0.0.1 at 2012-06-10 13:33:38 -0700
+Served asset /jquery.rdio.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-06-10 13:33:38 -0700
+Served asset /sessions.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-06-10 13:33:38 -0700
+Served asset /static_pages.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-06-10 13:33:38 -0700
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-10 13:33:38 -0700
+Served asset /application.js - 304 Not Modified (27ms)
+
+
+Started GET "/sessions/twitter" for 127.0.0.1 at 2012-06-10 13:33:41 -0700
+Processing by SessionsController#twitter as HTML
+Redirected to http://0.0.0.0:3000/auth/twitter
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2012-06-10 13:33:41 -0700
+
+
+Started GET "/auth/twitter/callback?oauth_token=gAG2MrNaUdkNxslQOirOB3zvR1BTXOZnamoS3qydjJA&oauth_verifier=jlAtNJMOZHf5bLV0XB8SN3XWGdzNuJ36MJzVsY4E" for 127.0.0.1 at 2012-06-10 13:33:51 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"gAG2MrNaUdkNxslQOirOB3zvR1BTXOZnamoS3qydjJA", "oauth_verifier"=>"jlAtNJMOZHf5bLV0XB8SN3XWGdzNuJ36MJzVsY4E", "provider"=>"twitter"}
+  [1m[36mUser Load (30.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."twitter_id" = '51160754' LIMIT 1[0m
+SQLite3::SQLException: no such column: users.twitter_id: SELECT  "users".* FROM "users"  WHERE "users"."twitter_id" = '51160754' LIMIT 1
+Completed 500 Internal Server Error in 209ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.twitter_id: SELECT  "users".* FROM "users"  WHERE "users"."twitter_id" = '51160754' LIMIT 1):
+  app/models/user.rb:41:in `find_by_auth_hash'
+  app/models/user.rb:17:in `sign_in_with_auth_hash'
+  app/controllers/sessions_controller.rb:22:in `create'
+
+
+  Rendered /Users/bomatson/.rvm/gems/ruby-1.9.2-p290@rails3tutorial2ndEd/gems/actionpack-3.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.6ms)
+  Rendered /Users/bomatson/.rvm/gems/ruby-1.9.2-p290@rails3tutorial2ndEd/gems/actionpack-3.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /Users/bomatson/.rvm/gems/ruby-1.9.2-p290@rails3tutorial2ndEd/gems/actionpack-3.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.9ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20120607002438)
+Migrating to AddNameToUsers (20120608171829)
+Migrating to CreateProfiles (20120608180431)
+Migrating to AddNameToProfiles (20120608183956)
+Migrating to AddUserIdToProfile (20120608191607)
+Migrating to ProcessedTweets (20120610010039)
+Migrating to ProcesedTweetsAttributes (20120610042920)
+Migrating to ProcesedTweetsTextField (20120610171323)
+Migrating to ProcesedTweetsSongFields (20120610171527)
+Migrating to UserOauthFields (20120610173151)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (36.3ms)[0m  ALTER TABLE "users" ADD "twitter_id" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "twitter_name" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "twitter_token" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "twitter_secret" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "rdio_id" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "rdio_token" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "rdio_secret" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120610173151')[0m
+  [1m[35m (55.3ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("processed_tweets")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("profiles")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_reset_password_token')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-10 13:35:06 -0700
+Connecting to database specified by database.yml
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (27.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 537ms (Views: 514.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /custom.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /sessions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /static_pages.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /jquery.js - 304 Not Modified (25ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /bootstrap.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/autotune_custom.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /autotune_custom.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.rdio.min.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /jquery.rdio.min.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /sessions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /static_pages.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /application.js - 304 Not Modified (27ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-10 13:35:08 -0700
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/sessions/twitter" for 127.0.0.1 at 2012-06-10 13:35:13 -0700
+Processing by SessionsController#twitter as HTML
+Redirected to http://0.0.0.0:3000/auth/twitter
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2012-06-10 13:35:13 -0700
+
+
+Started GET "/auth/twitter/callback?oauth_token=BrgrK7IekfTi2W8YXekPsiXCaq1wEGQdkENtQ7Tok&oauth_verifier=5fKVVKbaaH5AHqENSxbniqrj6Fj87MCAgXD7kowp4" for 127.0.0.1 at 2012-06-10 13:35:14 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"BrgrK7IekfTi2W8YXekPsiXCaq1wEGQdkENtQ7Tok", "oauth_verifier"=>"5fKVVKbaaH5AHqENSxbniqrj6Fj87MCAgXD7kowp4", "provider"=>"twitter"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."twitter_id" = '51160754' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (66.4ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "rdio_id", "rdio_secret", "rdio_token", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "twitter_id", "twitter_name", "twitter_secret", "twitter_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 10 Jun 2012 20:35:14 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "notnull"], ["encrypted_password", "notnull"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Bobby Matson"], ["rdio_id", nil], ["rdio_secret", nil], ["rdio_token", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["twitter_id", "51160754"], ["twitter_name", "bomatson"], ["twitter_secret", "NMUfVVMMwRDcyn54bKgDrWXcVdkvF303NhYBEaeEG5A"], ["twitter_token", "51160754-hc0uJNFeRQYBwgrJA6qYbMGd0usID0SOHrS4BdOTE"], ["updated_at", Sun, 10 Jun 2012 20:35:14 UTC +00:00]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 150ms (ActiveRecord: 86.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /custom.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/autotune_custom.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /autotune_custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.rdio.min.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /jquery.rdio.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:15 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Processing by SessionsController#destroy as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /custom.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/autotune_custom.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /autotune_custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.rdio.min.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /jquery.rdio.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:20 -0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/sessions/twitter" for 127.0.0.1 at 2012-06-10 13:35:22 -0700
+Processing by SessionsController#twitter as HTML
+Redirected to http://0.0.0.0:3000/auth/twitter
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2012-06-10 13:35:22 -0700
+
+
+Started GET "/auth/twitter/callback?oauth_token=k4c40sTl1FvaR3ylG6XBZe5ZHDDY0nPGNbdgvpzw&oauth_verifier=TuTqXH4gTYQC15sc1kmTP8xZupVjmJy1UIn6ArWcs" for 127.0.0.1 at 2012-06-10 13:35:24 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"k4c40sTl1FvaR3ylG6XBZe5ZHDDY0nPGNbdgvpzw", "oauth_verifier"=>"TuTqXH4gTYQC15sc1kmTP8xZupVjmJy1UIn6ArWcs", "provider"=>"twitter"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."twitter_id" = '51160754' LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/sessions/twitter" for 127.0.0.1 at 2012-06-10 13:35:25 -0700
+Processing by SessionsController#twitter as HTML
+Redirected to http://0.0.0.0:3000/auth/twitter
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2012-06-10 13:35:25 -0700
+
+
+Started GET "/auth/twitter/callback?oauth_token=D3r2ZRrO8PgCEODFmFO8U5V8dDwO5pnBMIvbNlZmoM&oauth_verifier=fWcJYr6Bi1tCzgN8z2E1l66JWH9aZmPuXJBtJRQ70" for 127.0.0.1 at 2012-06-10 13:35:25 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"D3r2ZRrO8PgCEODFmFO8U5V8dDwO5pnBMIvbNlZmoM", "oauth_verifier"=>"fWcJYr6Bi1tCzgN8z2E1l66JWH9aZmPuXJBtJRQ70", "provider"=>"twitter"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."twitter_id" = '51160754' LIMIT 1
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered static_pages/home.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 78ms (Views: 76.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /custom.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/autotune_custom.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /autotune_custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.rdio.min.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /jquery.rdio.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-10 13:35:26 -0700
+Served asset /application.js - 304 Not Modified (1ms)
