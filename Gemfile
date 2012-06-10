@@ -17,11 +17,15 @@ gem 'lastfm'
 gem 'twitter'
 gem 'decent_exposure'
 
-gem 'resque'
-gem 'resque-scheduler'
-
-gem 'hirefire'
+#gem 'resque'
+#gem 'resque-scheduler'
+#
+#gem 'hirefire'
 #gem 'ruby-debug-base19', :git => 'https://github.com/tribune/ruby-debug-base19.git', :require => false, :group => [:development, :test]
+
+gem 'redis'
+gem 'connection_pool'
+gem 'girl_friday'
 
 group :development, :test do
 

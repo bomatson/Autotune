@@ -7,9 +7,13 @@ class ApplicationController < ActionController::Base
   helper_method :authenticated?, :session_user, :session_user_id
 
   def check_valid_session
-    if session[:user_id] and session_user.nil?
-      session.clear
-      flash[:warning] = "Your session has expired"
+    begin
+      if session[:user_id] and session_user.nil?
+        session.clear
+        flash[:warning] = "Your session has expired"
+      end
+    rescue
+      logout_user
     end
   end
 
