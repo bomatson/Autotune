@@ -14,12 +14,11 @@ class TwitterCrawler
     results = []
     Twitter.search("#autotuneapp").map do |tweet|
       pre_processed = pre_process_tweet(tweet)
-
-        if pre_processed.should_process
+      if pre_processed.should_process
         begin
           ProcessedTweet.save_processed(pre_processed)
         rescue => ex
-           errors.push ex: ex, processed: pre_processed
+          errors.push ex: ex, processed: pre_processed
         end
       end
     end
@@ -38,8 +37,9 @@ class TwitterCrawler
   end
 
   def _process_moods(text)
+    hash_tags = %W{#wakeup #getbig #getdrunk #passout #hookup #dowork }
     text_to_search = text.downcase + " "
-    HASH_TAGS.keep_if do |tag|
+    hash_tags.keep_if do |tag|
       text_to_search.include?(tag + " ") or text_to_search.include?(tag + "#")
     end
   end
