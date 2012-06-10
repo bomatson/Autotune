@@ -11,6 +11,8 @@ Autotune::Application.routes.draw do
   match '/signout' => 'sessions#destroy', :as => :signout
   match '/auth/:provider/callback', to: 'sessions#create'
 
+  get '/most_recent/:mood' => 'tunes#most_recent'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
