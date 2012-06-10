@@ -14,8 +14,11 @@
 				<%= content_tag(:div, value, class: "alert alert-#{key}")%>
 			<% end %>
 			<%= yield %>
-			<%= render 'layouts/footer' %>
-			<%=debug(params) if Rails.env.development?%>
+			
+			<div id="getStarted">
+				<h2>Start your playlist: Select an activity</h2>
+				<p>You will be prompted to sign in via <span class="twitter_icon"></span></p>
+			</div>
 			
 			<div id="iWantTo"> 
 				
@@ -56,6 +59,39 @@
 				</div><!--.row-->
 					
 			</div> <!-- #iWantTo -->
-		</div>
+			
+			<div id="tweetThis">
+				
+				<div id="createPlaylist">
+					<h2>Get input from your friends</h2>
+					<p>Submit your tweet to get your playlist</p>
+				</div>
+			
+			
+				<div class="row">
+					<div id="tweetThisForm" class="span8 offset2">
+						<form>
+							<textarea>This is the maximum length of a tweet and should be close to how much space is needed for our text, assuming it is close to the limit, hahaa</textarea>
+							<input class="submit" type="submit" value="Tweet it!" />
+						</form>
+						
+					</div><!--#tweetThisForm-->
+				</div><!--.row-->
+				
+			</div><!--#tweetThis-->
+			<div id="musicPlayer">
+				<div id="listenToPlaylist">
+					<h2>This is your #HashTag Playlist</h2>
+					<p>Your friends' suggestions will be addded in realtime</p>
+				</div>
+				
+				<div id="playerBackground">
+					<p>This is where the player goes</p>
+				</div>
+			</div>
+			
+			<%=debug(params) if Rails.env.development?%>
+			
+		</div><!--.container-->
 	</body>
 </html>
