@@ -41,4 +41,9 @@ Autotune::Application.configure do
       key: 'W1fX4UykZTmrZ6jOhUnkYQ',
       secret: 'GjIBtLbQk5H8NdSlu6eHaJAWSgzyCFgF9utpbQI'
   }
+
+  config.rdio = {
+      key: 'vzuc9saqxtvje8pvda35f922',
+      secret: 'S2SJNchwYv'
+  }
 end

@@ -3,21 +3,15 @@ require 'twitter_crawler.rb'
 
 module Rdio
   class Search
-    
-  
-  def process_tweet(processed)
-    suggestion = Rdio::init(ENV['RDIO_KEY'], ENV['RDIO_SECRET'])
-    track_data = suggestion.search(processed, "t")
-    
-    embed = track_data.first.embed_url
-    
-    if embed.empty? 
-      raise 'Rdio error'
-    end
-    
-    embed
 
-  end
-  
+    def self.process_tweet(processed)
+      suggestion = Rdio::init(Rails.application.config.rdio[:key], Rails.application.config.rdio[:secret])
+      processed.search_queries.each do |q|
+        track_data = suggestion.search(q, "t")
+        return track_data.first.embed_url unless q.empty?
+      end
+
+      nil
+    end
   end
 end

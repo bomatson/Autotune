@@ -4,26 +4,36 @@ class TwitterCrawler
 
   HASH_TAGS = %W{#wakeup #getbig #getdrunk #passout #hookup #dowork }
 
+  attr_accessor :errors
+
+  def initialize
+    self.errors = []
+  end
+
   def process_new_tweets
     results = []
-    Twitter.search("#autotuneapp", rpp: 1).map do |tweet|
+    Twitter.search("#autotuneapp").map do |tweet|
       pre_processed = pre_process_tweet(tweet)
 
       if pre_processed.should_process
-        process_tweet(pre_processed)
+        begin
+          ProcessedTweet.save_processed(pre_processed)
+        rescue => ex
+           errors.push ex: ex, processed: pre_processed
+        end
       end
     end
   end
 
-  # def save_tweet
-  #   result.save
-  # end
 
   def pre_process_tweet(tweet)
     processed = PreProcessedTweet.new
-    processed.tweet = tweet
-    processed.moods = _process_moods(tweet.text)
-    processed.search_queries = _process_search_queries(tweet.text)
+    processed.ignore = tweet.text.include?("#needsuggestions") or tweet.text.include?("#autotune ")
+    unless processed.ignore
+      processed.tweet = tweet
+      processed.moods = _process_moods(tweet.text)
+      processed.search_queries = _process_search_queries(tweet.text)
+    end
     processed
   end
 
@@ -53,10 +63,10 @@ class TwitterCrawler
 end
 
 class PreProcessedTweet
-  attr_accessor :search_queries, :moods, :tweet
+  attr_accessor :search_queries, :moods, :tweet, :ignore
 
   def should_process
-    search_queries.any? and moods.any? and !ProcessedTweet.where(tweet_id: tweet.id).exists?
+    !ignore and search_queries.any? and moods.any? and !ProcessedTweet.where(tweet_id: tweet.id).exists?
   end
 end
 
