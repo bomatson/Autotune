@@ -6,4 +6,4 @@ Built for the Hollywood HackDay 2012
 
 [Learn About Me](http://about.me/bobbymatson)
 
-[@bomaton](https://twitter.com/bomatson)
+[@bomatson](https://twitter.com/bomatson)
