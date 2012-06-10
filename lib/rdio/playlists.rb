@@ -5,7 +5,7 @@ module Rdio
     class << self
       
       def get_playlists_for
-        # Rdio::Playlist (ENV['RDIO_KEY'], ENV['RDIO_SECRET']).user.get_user_playlists(username)
+        #Rdio::Playlist (ENV['RDIO_KEY'], ENV['RDIO_SECRET']).user.get_user_playlists(username)
       end
       
       def add_song_to_playlist
