@@ -8,6 +8,8 @@ class ProcessedTweet < ActiveRecord::Base
     new_tweet.from_user = processed.tweet.from_user
     new_tweet.tweet_id = processed.tweet.id
     new_tweet.from_user_name = processed.tweet.from_user_name
+    new_tweet.moods = processed.moods.join(' ')
+    new_tweet.created_at = processed.tweet.created_at
 
     new_tweet.save!
   end

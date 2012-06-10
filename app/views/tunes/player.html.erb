@@ -1,0 +1,10 @@
+<div id="rdio_container" height="100%" width="100%"></div>
+
+<script>
+  $(function(){
+      setTimeout(function(){
+         $("<iframe></iframe>").attr('src', '<%= @embed_url %>').appendTo("#rdio_container");
+        //$('#rdio_frame').attr('src', '<%= @embed_url %>');
+      }, 1000);
+  })
+</script>

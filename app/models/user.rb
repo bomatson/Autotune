@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
 
     if auth_hash[:provider] == 'twitter'
       user = User.new
-      user.name = auth_hash['info']['name']
+      #user.name = auth_hash['info']['name']
       user.twitter_id = auth_hash['uid']
       user.twitter_name = auth_hash['info']['nickname']
       user.twitter_token = auth_hash['credentials']['token']
