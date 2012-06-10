@@ -1,3 +1,5 @@
+require './lib/rdio/search.rb'
+
 class TwitterCrawler
 
   HASH_TAGS = %W{#wakeup #getbig #getdrunk #passout #hookup #dowork }
@@ -13,11 +15,9 @@ class TwitterCrawler
     end
   end
 
-  def process_tweet(pre_processed_tweet)
-    # search for song
-    # if song is found then get the embed_url
-    # save a new processed_tweet active record
-  end
+  # def save_tweet
+  #   result.save
+  # end
 
   def pre_process_tweet(tweet)
     processed = PreProcessedTweet.new

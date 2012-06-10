@@ -1,23 +1,22 @@
 require 'rdio'
+require 'twitter_crawler.rb'
 
 module Rdio
   class Search
+    attr_accessible :embed_url
   
-  def lookup_suggestion(tweet)
-    
-  end
-  
-  def process_tweet(pre_processed_tweet)
+  def process_tweet(processed)
     suggestion = Rdio::init(ENV['RDIO_KEY'], ENV['RDIO_SECRET'])
-    artist_data = suggestion.search(pre_processed_tweet)
+    track_data = suggestion.search(processed, "t")
     
-    result = JSON.parse(artist_data)
+    embed = track_data.first.embed_url
     
-    if result.has_key? 'Error'
-       raise "Rdio error"
+    if embed.empty? 
+      raise 'Rdio error'
     end
-    # if song is found then get the embed_url
-    # save a new processed_tweet active record
+    
+    :embed_url = embed
+
   end
   
   end
