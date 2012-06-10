@@ -31,13 +31,6 @@ RSpec.configure do |config|
   config.infer_base_class_for_anonymous_controllers = false
 
   config.before :each do
-    load "#{Rails.root}/db/seeds.rb"
-    load "#{Rails.root}/db/test_seeds.rb"
-
-    # set the work queues to process immediatly so that test cases do not need to deal with async issues
-    # NOTE: this is set before each test because some tests may want to set this back to non-immediate in order
-    #       to test async dependency issues
-    #GirlFriday::WorkQueue.immediate!
     ResqueSpec.reset!
   end
 end
