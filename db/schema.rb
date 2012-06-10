@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120610220645) do
+ActiveRecord::Schema.define(:version => 20120610224348) do
 
   create_table "processed_tweets", :force => true do |t|
     t.integer "tweet_id",       :null => false
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20120610220645) do
     t.string  "album"
     t.string  "artist"
     t.string  "moods"
+    t.time    "created_at"
   end
 
   create_table "profiles", :force => true do |t|

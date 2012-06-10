@@ -15,7 +15,7 @@ class TwitterCrawler
     Twitter.search("#autotuneapp").map do |tweet|
       pre_processed = pre_process_tweet(tweet)
 
-      if pre_processed.should_process
+        if pre_processed.should_process
         begin
           ProcessedTweet.save_processed(pre_processed)
         rescue => ex

@@ -12,6 +12,7 @@ Autotune::Application.routes.draw do
   match '/auth/:provider/callback', to: 'sessions#create'
 
   get '/most_recent/:mood' => 'tunes#most_recent'
+  get '/random/:mood' => 'tunes#random'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
