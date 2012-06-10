@@ -2,12 +2,12 @@ require 'rdio'
 
 module Rdio
   class Search
-    attr_accessible :username, :new_playlist
   
-  def lookup_artist_suggestion()
-    artist_suggestion = "data from tweet"
-    artist_suggestion
+  def lookup_suggestion(tweet)
+    suggestion = Rdio.search(artist: tweet)
+    suggestion
   end
     
+  
   end
 end
