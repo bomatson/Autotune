@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	$('#iWantTo div.action').hover( function() {
 		$(this).find('span.highlight').stop().animate({ opacity: .2 }, 200);
 		console.log('hover');
@@ -32,6 +33,8 @@ $(document).ready(function() {
 			$('#musicPlayer #playerBackground').animate({ marginTop: '120px', opacity: 1}, 200 )
 		});
 	}
+	
+	showButtons();
 	
 	$('#button_1').click( function() { showButtons(); } );
 	$('#button_2').click( function() { showTweetForm(); } );
