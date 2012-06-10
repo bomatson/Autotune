@@ -6,6 +6,9 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim'%>	
+  
+  <script src="http://platform.twitter.com/anywhere.js?id=W1fX4UykZTmrZ6jOhUnkYQ&v=1" type="text/javascript"></script>
+  
 </head>
 	<body>
 	<%= render 'layouts/header'%>
@@ -18,8 +21,8 @@
 			<div id="iWantTo"> 
 				
 				<div id="getStarted">
-					<h2>Start your playlist: Select an activity</h2>
-					<p>You will be prompted to sign in via <span class="twitter_icon"></span></p>
+					<h2>What do you want to do?</h2>
+					<p>You may be prompted to sign in via <span class="twitter_icon"></span></p>
 				</div>
 			
 				<div class="row">
@@ -63,15 +66,15 @@
 			<div id="tweetThis">
 				
 				<div id="createPlaylist" class="span12">
-					<h2>Get input from your friends</h2>
+					<h2>Get tracks from your friends</h2>
 					<p>Submit your tweet to get your playlist</p>
 				</div>
 			
 			
 				<div class="row">
 					<div id="tweetThisForm" class="span8 offset2">
-						<form>
-							<textarea>This is the maximum length of a tweet and should be close to how much space is needed for our text, assuming it is close to the limit, hahaa</textarea>
+						<form id="tweetThisFormForm">
+							<textarea></textarea>
 							<input class="submit" type="submit" value="Tweet it!" />
 						</form>
 						
@@ -82,20 +85,35 @@
 			
 			<div id="musicPlayer">
 				<div id="listenToPlaylist" class="span12">
-					<h2>This is your #HashTag Playlist</h2>
-					<p>Your friends' suggestions will be addded in realtime</p>
+					<h2>This is your #AutoTuneApp Playlist</h2>
+					<p>Your friends' suggestions will be added in realtime</p>
 				</div>
 				
 				<div id="playerBackground">
 					<div id="next"></div>
 					<p>This is where the player goes</p>
 				</div>
-			</div>
+			</div><!--#musicPlayer-->
 			
 			<%=debug(params) if Rails.env.development?%>
 			
 		</div><!--.container-->
 		
+		<div id="tbox"></div>
+<script type="text/javascript">
+ 
+  twttr.anywhere(function (T) {
+ 
+    T("#tbox").tweetBox({
+      height: 100,
+      width: 400,
+      defaultContent: "<YOUR DEFAULT TWEETBOX CONTENT HERE>"
+    });
+ 
+  });
+ 
+</script>
+
 		<div id="test">
 			<div class="button" id="button_1"></div>
 			<div class="button" id="button_2"></div>

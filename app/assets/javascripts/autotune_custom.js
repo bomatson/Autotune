@@ -43,6 +43,13 @@ $(document).ready(function() {
 		$('#tweetThisForm form textarea').html(tweetText);
 		showTweetForm(); 
 	});
+	
+	$('#tweetThisFormForm').submit( function() {
+		var tweetText = $(this).find('textarea').html();
+		console.log(tweetText);
+		return false;
+	});
+	
 	$('#button_1').click( function() { showButtons(); } );
 	$('#button_2').click( function() { showTweetForm(); } );
 	$('#button_3').click( function() { showPlaylist(); } );
