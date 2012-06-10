@@ -15,13 +15,13 @@
 			<% end %>
 			<%= yield %>
 			
-			<div id="getStarted">
-				<h2>Start your playlist: Select an activity</h2>
-				<p>You will be prompted to sign in via <span class="twitter_icon"></span></p>
-			</div>
-			
 			<div id="iWantTo"> 
 				
+				<div id="getStarted">
+					<h2>Start your playlist: Select an activity</h2>
+					<p>You will be prompted to sign in via <span class="twitter_icon"></span></p>
+				</div>
+			
 				<div class="row">
 					<div id="wakeUp" class="action span4">
 						<span class="hash">#WakeUp</span>
@@ -62,7 +62,7 @@
 			
 			<div id="tweetThis">
 				
-				<div id="createPlaylist">
+				<div id="createPlaylist" class="span12">
 					<h2>Get input from your friends</h2>
 					<p>Submit your tweet to get your playlist</p>
 				</div>
@@ -79,13 +79,15 @@
 				</div><!--.row-->
 				
 			</div><!--#tweetThis-->
+			
 			<div id="musicPlayer">
-				<div id="listenToPlaylist">
+				<div id="listenToPlaylist" class="span12">
 					<h2>This is your #HashTag Playlist</h2>
 					<p>Your friends' suggestions will be addded in realtime</p>
 				</div>
 				
 				<div id="playerBackground">
+					<div id="next"></div>
 					<p>This is where the player goes</p>
 				</div>
 			</div>
@@ -93,5 +95,11 @@
 			<%=debug(params) if Rails.env.development?%>
 			
 		</div><!--.container-->
+		
+		<div id="test">
+			<div class="button" id="button_1"></div>
+			<div class="button" id="button_2"></div>
+			<div class="button" id="button_3"></div>
+		</div>
 	</body>
 </html>

@@ -54,7 +54,7 @@ font-size: 1.1em; line-height: 1.7em;
 }
 /* header */
 .navbar-inner {
-	height: 60px !important;
+	height: 50px !important;
 	background: #222222;
 	border-bottom: 1px solid #141414;
 }
@@ -64,9 +64,9 @@ font-size: 1.1em; line-height: 1.7em;
   	color: #fff;
   	text-shadow: 0 1px 1px #000;
   	display: block;
-  	margin-top: 20px;
+  	margin-top: 15px;
   	margin-right: 10px;
-	font-size: 200%;
+	font-size: 170%;
 	font-weight: bold;
 	}
 
@@ -110,6 +110,8 @@ float: left;
 	font-family: helvetica, sans-serif;
 	margin: 30px 0;
 	h2 {
+		width: 100%;
+		text-align: center;
 		font-size: 250%;
 		text-shadow: 0 1px 0 #000;
 		color: #eeeeee;
@@ -135,11 +137,15 @@ float: left;
 	
 /* #iWantTo */
 #iWantTo {
+	margin-top: -50px;
+	opacity: 0;
 	font-family: helvetica, sans-serif;
-	font-size: 200%;
-	font-style: italic;
 	text-align: center;
+	div.row {}
 	div.action {
+		opacity: 0; margin-top: -50px; 
+		font-size: 200%;
+		font-style: italic;
 		position: relative;
 		height: 300px;
 		box-shadow: 0 1px 1px #000;
@@ -300,8 +306,13 @@ float: left;
 
 /* #tweetThis */
 	#tweetThis {
+		margin-top: 50px;
+		position: absolute;
+		top: 0;
+		opacity: 0;
 		#tweetThisForm {
-			margin-top: 20px;
+			margin-top: -30px;
+			opacity: 0;
 			form {
 					textarea {
 						background: #2b2b2b;
@@ -323,6 +334,8 @@ float: left;
 						border-radius: 4px;
 						}
 					input.submit {
+						margin-top: -50px;
+						opacity: 0;
 						width: 620px;
 						height: 80px;
 						font-size: 170%;
@@ -364,7 +377,14 @@ float: left;
 
 /* #musicPlayer */
 #musicPlayer {
+	top: 0;
+	position: absolute;
+	opacity: 0;
+	div.row { opacity: 0; margin-top: -50px; }
 	#playerBackground {
+		position: relative;
+		margin-top: 50px;
+		opacity: 0;
 		padding: 25px;
 		background: #252525;
 		border-bottom: 1px solid #4d4d4d;
@@ -372,6 +392,38 @@ float: left;
 		-moz-border-radius: 4px;
 		-webkit-border-radius: 4px;
 		border-radius: 4px;
+		#next {
+			width: 100px;
+			height: 100px;
+			background: #fff;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+			border-radius: 4px;
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			}
 		}
 	}
 /* end #musicPlayer */
+
+/* #test */
+	#test {
+		width: 50px;
+		height: 20px;
+		position: fixed;
+		bottom: 0;
+		right: 20px;
+		background: #000;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		div.button {
+			width: 10px;
+			height: 10px;
+			margin: 5px 0 0 5px;
+			float: left;
+			background: #fff;
+			}
+		}
+/* end #test */
