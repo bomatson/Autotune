@@ -11,10 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120610010039) do
+ActiveRecord::Schema.define(:version => 20120610042920) do
 
   create_table "processed_tweets", :force => true do |t|
-    t.integer "tweet_id", :null => false
+    t.integer "tweet_id",       :null => false
+    t.string  "embed_url"
+    t.string  "from_user"
+    t.string  "from_user_name"
+    t.string  "to_user"
+    t.string  "to_user_name"
   end
 
   create_table "users", :force => true do |t|

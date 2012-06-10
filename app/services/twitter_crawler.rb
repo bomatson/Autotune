@@ -2,19 +2,21 @@ class TwitterCrawler
 
   HASH_TAGS = %W{#wakeup #getbig #getdrunk #passout #hookup #dowork }
 
-  def process_tweets(tweets)
-
-  end
-
-  def pre_process_new_tweets
+  def process_new_tweets
     results = []
     Twitter.search("#autotuneapp", rpp: 1).map do |tweet|
       pre_processed = pre_process_tweet(tweet)
 
       if pre_processed.should_process
-
+        proces_tweet(pre_processed)
       end
     end
+  end
+
+  def process_tweet(pre_processed_tweet)
+    # search for song
+    # if song is found then get the embed_url
+    #save a new processed_tweet active record
   end
 
   def pre_process_tweet(tweet)
@@ -46,7 +48,7 @@ class TwitterCrawler
   end
 
   def cleanse_text_of_noise(text)
-    text.gsub(/#([A-Za-z0-9_]+)/, '').gsub(' by ', ' ').gsub(/\s\s/, ' ')
+    text.gsub(/#([A-Za-z0-9_]+)/, '').gsub(/@([A-Za-z0-9_]+)/, '').gsub(' by ', ' ').gsub(/\s\s/, ' ')
   end
 end
 
