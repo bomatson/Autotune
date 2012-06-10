@@ -20,8 +20,8 @@ $(document).ready(function() {
 	
 	function showTweetForm() {
 		$('#iWantTo').animate({ marginTop: '50px', opacity: 0}, 100);
-		$('#tweetThis').animate({ marginTop: '90px', opacity: 1 }, 200, function() {
-			$('#tweetThis #tweetThisForm').animate({ marginTop: '30px', opacity: 1}, 200, function() {
+		$('#tweetThis').animate({ marginTop: '60px', opacity: 1 }, 200, function() {
+			$('#tweetThis #tweetThisForm').animate({ marginTop: '0', opacity: 1}, 200, function() {
 				$('#tweetThisForm input').animate({ marginTop: '0', opacity: 1}, 200)
 			});
 		});
@@ -36,6 +36,13 @@ $(document).ready(function() {
 	
 	showButtons();
 	
+	$('#iWantTo div.action').click( function() {
+		var hashTag = $(this).attr('id');
+		console.log(hashTag);
+		var tweetText = "I want to #" + hashTag + ". @reply me a song to add it my #autotune playlist."
+		$('#tweetThisForm form textarea').html(tweetText);
+		showTweetForm(); 
+	});
 	$('#button_1').click( function() { showButtons(); } );
 	$('#button_2').click( function() { showTweetForm(); } );
 	$('#button_3').click( function() { showPlaylist(); } );
