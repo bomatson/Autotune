@@ -3,7 +3,6 @@ require 'omniauth-rdio'
 
 module Rdio
   class Session
-    attr_reader :connection
     
     def initialize(session = nil)#, username)
       raise NoUserSession if session.nil?
