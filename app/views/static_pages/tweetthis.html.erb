@@ -1,19 +1,29 @@
-			<div id="tweetThis">
-				
-				<div id="createPlaylist" class="span12">
-					<h2>Get tracks from your friends</h2>
-					<p>Submit your tweet to get your playlist</p>
-				</div>
-			
-			
-				<div class="row">
-					<div id="tweetThisForm" class="span8 offset2">
-						<form id="tweetThisFormForm">
-							<textarea></textarea>
-							<input class="submit" type="submit" value="Tweet it!" />
-						</form>
-						
-					</div><!--#tweetThisForm-->
-				</div><!--.row-->
-				
-			</div><!--#tweetThis-->
+<div id="tweetThis">
+
+    <div id="createPlaylist" class="span12">
+        <h2>Get tracks from your friends</h2>
+        <p>Submit your tweet to get your playlist</p>
+    </div>
+
+
+    <div class="row">
+        <div id="tweetThisForm" class="span8 offset2">
+            <form id="tweetThisFormForm">
+                <textarea><%= params[:text] %></textarea>
+                <input id="tweet_btn" class="submit" type="button" value="Tweet it!" />
+            </form>
+
+        </div><!--#tweetThisForm-->
+    </div><!--.row-->
+
+</div><!--#tweetThis-->
+
+<script>
+  $(function(){
+     $("#tweetThis, #tweetThisForm, #tweet_btn").animate({opacity: 1}, 1000);
+      $("#tweet_btn").click(function(){
+         window.location.href = '/most_recent/<%= params[:mood] %>?text=' + encodeURIComponent($('textarea').val())
+      })
+
+  })
+</script>

@@ -27,7 +27,7 @@ class TwitterCrawler
 
   def pre_process_tweet(tweet)
     processed = PreProcessedTweet.new
-    processed.ignore = tweet.text.include?("#needsuggestions") or tweet.text.include?("#autotune ")
+    processed.ignore = tweet.text.include?("#needsuggestions") or tweet.text.include?("#autotune ") or tweet.text.include? ("#AutoTuneApp playlist")
     unless processed.ignore
       processed.tweet = tweet
       processed.moods = _process_moods(tweet.text)

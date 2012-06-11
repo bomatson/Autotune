@@ -1,10 +1,27 @@
-<div id="rdio_container" height="100%" width="100%"></div>
 
 <script>
   $(function(){
+      $("#musicPlayer, #playerBackground, #listenToPlaylist").animate({opacity: 1}, 100);
+
+      $('#next').click(function(){
+          window.location.href = '/next/<%= params[:mood] %>'
+      })
+
       setTimeout(function(){
          $("<iframe></iframe>").attr('src', '<%= @embed_url %>').appendTo("#rdio_container");
         //$('#rdio_frame').attr('src', '<%= @embed_url %>');
       }, 1000);
   })
 </script>
+
+<div id="musicPlayer">
+  <div id="listenToPlaylist" class="span12">
+    <h2>This is your #AutoTuneApp Playlist</h2>
+    <p>Your friends' suggestions will be added in realtime</p>
+  </div>
+
+  <div id="playerBackground">
+    <div id="next"></div>
+    <p><div id="rdio_container"></div></p>
+  </div>
+</div><!--#musicPlayer-->

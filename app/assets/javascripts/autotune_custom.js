@@ -18,7 +18,7 @@ $(document).ready(function() {
 		});
 	}
 	
-	function showTweetForm() {
+	window.showTweetForm = function showTweetForm() {
 		$('#iWantTo').animate({ marginTop: '50px', opacity: 0}, 100);
 		$('#tweetThis').animate({ marginTop: '60px', opacity: 1 }, 200, function() {
 			$('#tweetThis #tweetThisForm').animate({ marginTop: '0', opacity: 1}, 200, function() {
@@ -26,8 +26,8 @@ $(document).ready(function() {
 			});
 		});
 	}
-	
-	function showPlaylist() {
+
+    window.showTweetForm = function showPlaylist() {
 		$('#tweetThis').animate({ marginTop: '100px', opacity: 0}, 100);
 		$('#musicPlayer').animate({ marginTop: '60px', opacity: 1 }, 200, function() {
 			$('#musicPlayer #playerBackground').animate({ marginTop: '120px', opacity: 1}, 200 )
@@ -40,8 +40,9 @@ $(document).ready(function() {
 		var hashTag = $(this).attr('id');
 		console.log(hashTag);
 		var tweetText = "I want to #" + hashTag + " - @ reply me a song to add it my #AutoTuneApp playlist."
-		$('#tweetThisForm form textarea').html(tweetText);
-		showTweetForm(); 
+//		$('#tweetThisForm form textarea').html(tweetText);
+//		showTweetForm();
+        window.location = '/' + hashTag.toLowerCase() + '/tweet?text=' + encodeURIComponent(tweetText);
 	});
 	
 	$('#tweetThisFormForm').submit( function() {

@@ -5,14 +5,16 @@ Autotune::Application.routes.draw do
   get "sessions/rdio", as: :rdio_signin
 
   root to: 'static_pages#home'
-  
+
+
   match '/about',   to: 'static_pages#about'
 
   match '/signout' => 'sessions#destroy', :as => :signout
   match '/auth/:provider/callback', to: 'sessions#create'
 
+  get ':mood/tweet' => 'static_pages#tweet_this', as: :tweet_this
   get '/most_recent/:mood' => 'tunes#most_recent'
-  get '/random/:mood' => 'tunes#random'
+  get '/next/:mood' => 'tunes#random'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

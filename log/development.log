@@ -482,3 +482,95 @@ Served asset /application.js - 304 Not Modified (1ms)
 
 Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-06-10 16:51:33 -0700
 Served asset /users.js - 304 Not Modified (0ms)
+undefined local variable or method `generated_attribute_methods' for #<Class:0x007fe244e333b0>
+Connecting to database specified by database.yml
+Could not find table 'processed_tweets'
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20120607002438)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35m (0.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120607002438')[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to AddNameToUsers (20120608171829)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120608171829')
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateProfiles (20120608180431)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "profiles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120608180431')
+  [1m[36m (4.5ms)[0m  [1mcommit transaction[0m
+Migrating to AddNameToProfiles (20120608183956)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "profiles" ADD "first_name" varchar(255)[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "profiles" ADD "last_name" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120608183956')[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to AddUserIdToProfile (20120608191607)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "profiles" ADD "user_id" integer
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120608191607')[0m
+  [1m[35m (8.5ms)[0m  commit transaction
+Migrating to ProcessedTweets (20120610010039)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "processed_tweets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tweet_id" integer NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120610010039')[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to ProcesedTweetsAttributes (20120610042920)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "processed_tweets" ADD "embed_url" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "processed_tweets" ADD "from_user" varchar(255)[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "processed_tweets" ADD "from_user_name" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "processed_tweets" ADD "to_user" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "processed_tweets" ADD "to_user_name" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120610042920')[0m
+  [1m[35m (2.8ms)[0m  commit transaction
+Migrating to ProcesedTweetsTextField (20120610171323)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.4ms)[0m  ALTER TABLE "processed_tweets" ADD "text" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120610171323')[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+Migrating to ProcesedTweetsSongFields (20120610171527)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "processed_tweets" ADD "track" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "processed_tweets" ADD "album" varchar(255)[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "processed_tweets" ADD "artist" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120610171527')[0m
+  [1m[35m (6.6ms)[0m  commit transaction
+Migrating to UserOauthFields (20120610173151)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD "twitter_id" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "twitter_name" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "twitter_token" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "twitter_secret" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "rdio_id" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "rdio_token" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "rdio_secret" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120610173151')[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to ProcessedTweetsMoodField (20120610220645)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "processed_tweets" ADD "moods" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120610220645')[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to ProcessedTweetsTimestamps (20120610224348)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "processed_tweets" ADD "created_at" time
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120610224348')[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("processed_tweets")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("profiles")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_reset_password_token')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m

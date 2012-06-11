@@ -43,12 +43,16 @@ class ApplicationController < ActionController::Base
 
   # ensures that the user is authenticated
   def authenticate_user!(options = {})
-    options.defaults = {
+    defaults = {
         return_to: request.original_url,
         controller: :session,
-        action: :new,
+        action: :twitter,
         raise_exception: false
+
     }
+
+    defaults.merge!(options)
+    options = defaults;
 
     if authenticated?
       true
@@ -56,7 +60,7 @@ class ApplicationController < ActionController::Base
       raise "User is not authenticated"
     else
       session[:return_to] = options[:return_to]
-      redirect_to controller: options[:controller], action: options[:action]
+      redirect_to '/auth/twitter'
       false
     end
   end
