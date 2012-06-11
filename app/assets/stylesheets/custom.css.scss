@@ -338,7 +338,7 @@ float: left;
 						line-height: 130%;
 						font-family: helvetica, sans-serif;
 						font-style: italic;
-						margin-bottom: 15px;
+						margin-bottom: 30px;
 						-moz-border-radius: 4px;
 						-webkit-border-radius: 4px;
 						border-radius: 4px;
@@ -444,4 +444,9 @@ float: left;
 		}
 /* end #test */
 
-#rdio_container, #rdio_container iframe {width:740px; height:300px;margin-top:-45px; margin-bottom:40px;}
+#tweetThis #tweetThisForm {margin-top: 0;}
+#musicPlayer #playerBackground {position: static;margin-top:150px;}
+#rdio_container, #rdio_container iframe {width:885px; height:300px;}
+#musicPlayer {top: 60px;}
+
+#getStarted p, #createPlaylist p, #listenToPlaylist p {color: #ACACAC;}

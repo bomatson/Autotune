@@ -8,7 +8,7 @@ class ProcessNewTweetsJob
     rescue => ex
       Rails.logger.error(ex)
     ensure
-      sleep(0.5)
+      sleep(1)
       CRAWL_QUEUE.push({})
     end
   end

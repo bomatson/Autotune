@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
       user.twitter_name = auth_hash['info']['nickname']
       user.twitter_token = auth_hash['credentials']['token']
       user.twitter_secret = auth_hash['credentials']['secret']
-      user.email = 'notnull'
+      user.email = rand(1000000000).to_s
       user.encrypted_password = 'notnull'
     end
 
