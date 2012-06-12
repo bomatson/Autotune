@@ -7,7 +7,6 @@ module Rdio
     def initialize(session = nil)#, username)
       raise NoUserSession if session.nil?
       @session = session
-      @connection = create_rdio_connection
     end
 
   private
