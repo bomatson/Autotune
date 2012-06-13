@@ -30,6 +30,17 @@ class User < ActiveRecord::Base
       user.email = rand(1000000000).to_s
       user.encrypted_password = 'notnull'
     end
+    
+    if auth_hash[:provider] == 'rdio'
+      user = User.new
+      #user.name = auth_hash['info']['name']
+      user.rdio_id = auth_hash['uid']
+      user.rdio_name = auth_hash['info']['nickname']
+      user.rdio_token = auth_hash['credentials']['token']
+      user.rdio_secret = auth_hash['credentials']['secret']
+      user.email = rand(1000000000).to_s
+      user.encrypted_password = 'notnull'
+    end
 
     user.save!
     user
@@ -43,4 +54,7 @@ class User < ActiveRecord::Base
         nil
     end
   end
+  
+
+  
 end

@@ -16,6 +16,7 @@ class SessionsController < ApplicationController
     redirect_to '/auth/twitter'
   end
   
+  
   def create
     auth_hash = request.env['omniauth.auth']
     token = request.env['omniauth.strategy'].access_token.token
@@ -29,11 +30,18 @@ class SessionsController < ApplicationController
     logout_user
     return_to_url('/', notice: "You have successfully logged out")
   end
+  
+  
+  def update
+    ##update twitter
+  end
 
   private
 
   def auth_hash
     request.env['omniauth.auth']
   end
+  
+
   
 end

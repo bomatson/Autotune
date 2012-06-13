@@ -15,6 +15,7 @@ Autotune::Application.routes.draw do
   get ':mood/tweet' => 'static_pages#tweet_this', as: :tweet_this
   get '/most_recent/:mood' => 'tunes#most_recent'
   get '/next/:mood' => 'tunes#random'
+  post '/update', :to => 'static_pages#tweet_this', :as => 'update'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

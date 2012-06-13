@@ -104,4 +104,11 @@ class ApplicationController < ActionController::Base
       false
     end
   end
+  
+  # def post_to_twitter(post)
+  #   oauth = Twitter::OAuth.new('consumer token', 'consumer secret')
+  #   oauth.authorize_from_access('access token', 'access secret')
+  #   client = Twitter::Base.new(oauth)
+  #   client.update(post)
+  # end
 end

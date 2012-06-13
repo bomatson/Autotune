@@ -8,6 +8,7 @@ class StaticPagesController < ApplicationController
   def tweet_this
 
     render template: 'static_pages/tweetthis'
+    
   end
 
   def about

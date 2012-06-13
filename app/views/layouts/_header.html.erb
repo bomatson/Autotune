@@ -7,7 +7,8 @@
 				<% if authenticated? %>
 					<li><%= link_to "@#{session[:twitter_name]}", signout_path %></li>
 				<% else%>	
-				<li><%= link_to "Sign in", twitter_signin_path %></li>
+				<li><%= link_to "Twitter", twitter_signin_path %></li>
+				<li><%= link_to "Rdio", rdio_signin_path %></li>
 				<% end%>
 			</ul>
 			</nav>

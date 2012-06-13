@@ -1,3 +1,4 @@
+
 <div id="tweetThis">
 
     <div id="createPlaylist" class="span12">
@@ -11,6 +12,10 @@
             <form id="tweetThisFormForm">
                 <textarea><%= params[:text] %></textarea>
                 <input id="tweet_btn" class="submit" type="button" value="Tweet it!" />
+					<% form_for(:user,
+						:url => 'http://api.twitter.com') do |f| %>
+					  <% f.submit :text %>
+					<% end %>
             </form>
 
         </div><!--#tweetThisForm-->
@@ -23,6 +28,7 @@
      $("#tweetThis, #tweetThisForm, #tweet_btn").animate({opacity: 1}, 1000);
       $("#tweet_btn").click(function(){
          window.location.href = '/most_recent/<%= params[:mood] %>?text=' + encodeURIComponent($('textarea').val())
+
       })
 
   })

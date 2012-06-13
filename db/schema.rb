@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120610224348) do
+ActiveRecord::Schema.define(:version => 20120613031331) do
 
   create_table "processed_tweets", :force => true do |t|
     t.integer "tweet_id",       :null => false
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20120610224348) do
     t.string   "rdio_id"
     t.string   "rdio_token"
     t.string   "rdio_secret"
+    t.string   "rdio_name"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
