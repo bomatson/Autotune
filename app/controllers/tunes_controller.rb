@@ -11,4 +11,12 @@ class TunesController < ApplicationController
     @embed_url = @tweet.embed_url.gsub('https', 'http') if @tweet
     render template: 'tunes/player'
   end
+  
+  def new_playlist
+    Rdio::Playlist.create_playlist(:name => 'mood')
+  end
+  
+  def add_to_new_playlist
+  
+  end
 end

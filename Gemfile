@@ -24,7 +24,7 @@ gem 'decent_exposure'
 #gem 'ruby-debug-base19', :git => 'https://github.com/tribune/ruby-debug-base19.git', :require => false, :group => [:development, :test]
 
 #gem 'redis'
-#gem 'connection_pool'
+gem 'connection_pool'
 gem 'girl_friday'
 
 group :development, :test do

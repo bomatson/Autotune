@@ -4,13 +4,16 @@ module Rdio
   class Playlist
     class << self
       
-      def get_playlists_for
-        #Rdio::Playlist (ENV['RDIO_KEY'], ENV['RDIO_SECRET']).user.get_user_playlists(username)
+      def get_playlists_for(username)
+      playlist = Rdio::init(Rails.application.config.rdio[:key], Rails.application.config.rdio[:secret])
+        
+      return playlist.get_user_playlists(username)
+      
       end
       
-      def add_song_to_playlist
-        
-      end
+      # def add_song_to_playlist
+      #   
+      # end
       
       # 
       # def main(args)

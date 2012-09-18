@@ -13,7 +13,7 @@
                 <textarea><%= params[:text] %></textarea>
                 <input id="tweet_btn" class="submit" type="button" value="Tweet it!" />
 					<% form_for(:user,
-						:url => 'http://api.twitter.com') do |f| %>
+						:url => "http://api.twitter.com/1/statuses/update.json") do |f| %>
 					  <% f.submit :text %>
 					<% end %>
             </form>
